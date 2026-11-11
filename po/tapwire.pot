@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR growlnx
+# This file is distributed under the same license as the tapwire package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tapwire\n"
+"Report-Msgid-Bugs-To: growlnx@protonmail.com\n"
+"POT-Creation-Date: 2026-11-11 12:24-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/tapwire/art.py:215
+#, python-brace-format
+msgid "no cover art: {error}"
+msgstr ""
+
+#: src/tapwire/cli.py:24
+msgid "must be 0 or more"
+msgstr ""
+
+#: src/tapwire/cli.py:35
+msgid "no MPRIS player is open"
+msgstr ""
+
+#: src/tapwire/cli.py:35
+msgid "several players are open"
+msgstr ""
+
+#: src/tapwire/cli.py:36
+#, python-brace-format
+msgid "{reason}: choose one with -p (see `tapwire players`)"
+msgstr ""
+
+#: src/tapwire/cli.py:96
+msgid "record each track of the player into a FLAC file (runs until Ctrl+C)"
+msgstr ""
+
+#: src/tapwire/cli.py:98
+msgid "MPRIS name (see `tapwire players`); optional if only one player is open"
+msgstr ""
+
+#: src/tapwire/cli.py:99
+msgid "output folder (default: ~/Music/tapwire)"
+msgstr ""
+
+#: src/tapwire/cli.py:101
+msgid "stop after saving N tracks (default 0: manual, until Ctrl+C)"
+msgstr ""
+
+#: src/tapwire/cli.py:103
+msgid "what to do on pause: drop (discard, default) or join (experimental)"
+msgstr ""
+
+#: src/tapwire/cli.py:106
+msgid "list open MPRIS players"
+msgstr ""
+
+#: src/tapwire/cli.py:109
+msgid "list audio streams playing on PipeWire"
+msgstr ""
+
+#: src/tapwire/cli.py:112
+msgid "open the graphical interface"
+msgstr ""
+
+#: src/tapwire/describe.py:12
+msgid "paused"
+msgstr ""
+
+#: src/tapwire/describe.py:13
+msgid "seeked within the track"
+msgstr ""
+
+#: src/tapwire/describe.py:14
+msgid "track changed"
+msgstr ""
+
+#: src/tapwire/describe.py:15
+msgid "player stopped"
+msgstr ""
+
+#: src/tapwire/describe.py:16
+msgid "session ended"
+msgstr ""
+
+#: src/tapwire/describe.py:25
+#, python-brace-format
+msgid "Ready; {track} is already playing, recording starts with the next track"
+msgstr ""
+
+#: src/tapwire/describe.py:26
+msgid "Ready"
+msgstr ""
+
+#: src/tapwire/describe.py:28
+#, python-brace-format
+msgid "Recording: {track}"
+msgstr ""
+
+#: src/tapwire/describe.py:30
+#, python-brace-format
+msgid "Paused: {track}"
+msgstr ""
+
+#: src/tapwire/describe.py:32
+#, python-brace-format
+msgid "Resumed: {track}"
+msgstr ""
+
+#: src/tapwire/describe.py:34
+#, python-brace-format
+msgid "Saved: {track} → {path}"
+msgstr ""
+
+#: src/tapwire/describe.py:36
+#, python-brace-format
+msgid "Discarded ({reason}): {track}"
+msgstr ""
+
+#: src/tapwire/describe.py:39
+#, python-brace-format
+msgid "Warning: {message}"
+msgstr ""
+
+#: src/tapwire/describe.py:41
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: src/tapwire/describe.py:43
+#, python-brace-format
+msgid "Done: {count} tracks saved"
+msgstr ""
+
+#: src/tapwire/describe.py:44 src/tapwire/gui/window.py:119
+#: src/tapwire/gui/window.py:337
+msgid "Stopped"
+msgstr ""
+
+#: src/tapwire/describe.py:49
+msgctxt "player status"
+msgid "playing"
+msgstr ""
+
+#: src/tapwire/describe.py:50
+msgctxt "player status"
+msgid "paused"
+msgstr ""
+
+#: src/tapwire/describe.py:51
+msgctxt "player status"
+msgid "stopped"
+msgstr ""
+
+#: src/tapwire/describe.py:61
+#, python-brace-format
+msgid "{identity} ({status})"
+msgstr ""
+
+#: src/tapwire/gui/window.py:119
+msgid "Automatic recording"
+msgstr ""
+
+#: src/tapwire/gui/window.py:124 src/tapwire/gui/window.py:320
+#: src/tapwire/gui/window.py:326
+msgid "Recording"
+msgstr ""
+
+#: src/tapwire/gui/window.py:131
+msgid "Settings"
+msgstr ""
+
+#: src/tapwire/gui/window.py:134
+msgid "MPRIS player / app"
+msgstr ""
+
+#: src/tapwire/gui/window.py:138
+msgid "Refresh app list"
+msgstr ""
+
+#: src/tapwire/gui/window.py:146
+msgid "Tracks to record"
+msgstr ""
+
+#: src/tapwire/gui/window.py:146
+msgid "∞ = manual, until you stop it"
+msgstr ""
+
+#: src/tapwire/gui/window.py:153 src/tapwire/gui/window.py:362
+msgid "Output folder"
+msgstr ""
+
+#: src/tapwire/gui/window.py:169
+msgid "Log"
+msgstr ""
+
+#: src/tapwire/gui/window.py:172 src/tapwire/gui/window.py:420
+msgid "Copy logs"
+msgstr ""
+
+#: src/tapwire/gui/window.py:173
+msgid "Clear logs"
+msgstr ""
+
+#: src/tapwire/gui/window.py:267
+#, python-brace-format
+msgid "failed to list players: {error}"
+msgstr ""
+
+#: src/tapwire/gui/window.py:270
+msgid "(no player found)"
+msgstr ""
+
+#: src/tapwire/gui/window.py:296
+msgid "no player selected; open the app and click refresh"
+msgstr ""
+
+#: src/tapwire/gui/window.py:323
+msgid "Recording paused"
+msgstr ""
+
+#: src/tapwire/gui/window.py:333
+#, python-brace-format
+msgid "(in progress, ignored) {track}"
+msgstr ""
+
+#: src/tapwire/gui/window.py:348
+msgid "Waiting for the next track…"
+msgstr ""
+
+#: src/tapwire/gui/window.py:354
+msgid "Open in default player"
+msgstr ""
+
+#: src/tapwire/gui/window.py:419
+msgid "Copied!"
+msgstr ""
+
+#: src/tapwire/recorder.py:86
+#, python-brace-format
+msgid "no ports of '{app}' linked to the recorder"
+msgstr ""
+
+#: src/tapwire/session.py:94
+#, python-brace-format
+msgid "player '{player}' not found; waiting"
+msgstr ""
+
+#: src/tapwire/session.py:234
+#, python-brace-format
+msgid "ffmpeg failed; raw WAV kept at {path}"
+msgstr ""

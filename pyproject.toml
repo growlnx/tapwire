@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tapwire"
+version = "0.1.0"
+description = "Records what an app plays on PipeWire as tagged FLAC files, one per track, split using the player's MPRIS track information."
+readme = "README.md"
+authors = [{ name = "growlnx", email = "growlnx@protonmail.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    # No Debian/Ubuntu: apt install python3-gi gir1.2-gtk-4.0 gir1.2-adw-1
+    # e crie o venv com --system-site-packages para reaproveitar o PyGObject do sistema.
+    "PyGObject>=3.42",
+]
+
+[project.scripts]
+tapwire = "tapwire.cli:main"
+tapwire-gui = "tapwire.gui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tapwire = ["locale/*/LC_MESSAGES/*.mo"]
