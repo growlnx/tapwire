@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=tapwire
+Comment=Record what an app plays as tagged FLAC files, one per track
+Comment[pt_BR]=Grava o que um aplicativo toca em arquivos FLAC com tags, um por faixa
+Exec=tapwire-gui
+Icon=dev.tapwire.gui
+Terminal=false
+Categories=AudioVideo;Audio;Recorder;GTK;
+Keywords=record;recorder;flac;audio;pipewire;mpris;playlist;
+Keywords[pt_BR]=gravar;gravador;flac;áudio;pipewire;mpris;playlist;
+StartupNotify=true

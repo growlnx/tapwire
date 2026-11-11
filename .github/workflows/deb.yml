@@ -1,0 +1,59 @@
+name: deb
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends gettext
+
+      - name: Build .deb
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then
+            tools/build-deb.sh "$version"
+          else
+            tools/build-deb.sh
+          fi
+
+      - name: Smoke test (package imports from the staged tree)
+        run: |
+          stage=$(echo build/deb/tapwire_*_all/usr/lib/python3/dist-packages)
+          PYTHONPATH="$stage" python3 -c "import tapwire.cli, tapwire.i18n; print('ok')"
+
+      - name: Inspect package
+        run: |
+          dpkg-deb -I dist/*.deb
+          dpkg-deb -c dist/*.deb
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb
+          path: dist/*.deb
+          if-no-files-found: error
+
+  release:
+    needs: build
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: deb
+          path: dist
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.deb
+          generate_release_notes: true
