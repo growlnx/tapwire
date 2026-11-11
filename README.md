@@ -72,3 +72,7 @@ tools/i18n.sh extract                         # after changing strings in the co
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests -t .
 ```
+
+## License
+
+tapwire is released under the [MIT License](LICENSE).
